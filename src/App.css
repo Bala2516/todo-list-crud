@@ -1,38 +1,182 @@
-.App {
-  text-align: center;
+.containers {
+  background-image: url("./asserts/back.jpg");
+  background-size: cover;
+  height: 100vh;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.constainers-in {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+    rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  border: 1px solid #455653;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.modal-header .btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+table th {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  font-weight: 600;
+}
+
+.field {
+  font-size: large;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.input {
+  width: 100%;
+  margin: 6px 0px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: 1px solid #8d8d8c;
+}
+
+.input:focus {
+  outline: 2px solid #8d8d8c;
+}
+
+.table-box {
+  margin: 10px;
+  padding: 10px;
+  height:max-content;
+  overflow: scroll;
+  height: 82%;
+}
+
+.table-box::-webkit-scrollbar {
+  display: none;
+}
+
+.task-description {
+  background-image: url("./asserts/back.jpg");
+  background-size: cover;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px;
+}
+
+.todo-header {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.todo-header-design {
+  font-weight: 600;
+  font-size: 50px;
+  color: black;
+  margin-left: 6px;
+}
+
+.todo-badge {
+  display: inline-block;
   color: white;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: #455653;
+  margin-top: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.task-description-in {
+  border: 1px solid #455653;
+  width: 500px;
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.task-details{
+  overflow: scroll;
+  padding: 20px;
+}
+
+.task-details::-webkit-scrollbar{
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .task-description-in {
+    width: 450px;
   }
-  to {
-    transform: rotate(360deg);
+  .edit-column {
+    display: none;
+  }
+  .delete-column {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .constainers-in {
+    padding: 40px;
+  }
+  .task-description-in {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .constainers-in {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .constainers-in {
+    padding: 20px;
+  }
+  .todo-header {
+    display: block;
+    margin: 4px 4px 10px 4px;
+  }
+
+  .todo-header-design {
+    font-weight: 700;
+    font-size: 30px;
+  }
+  .todo-badge {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .task-description-in {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .constainers-in {
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .constainers-in {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .constainers-in {
+    padding: 4px;
   }
 }
