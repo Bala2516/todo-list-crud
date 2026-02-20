@@ -10,12 +10,9 @@ export function Todo({ setAllTaskDetails, inputTask, setInputTask }) {
   const currentTime = moment().format("MMMM Do YYYY, h:mm:ss a");
 
   useEffect(() => {
-    const getApi = async () => {
-      const response = JSON.parse(localStorage.getItem("TaskName"));
-      setAllTaskDetails(response || []);
-    };
-    getApi();
-  }, []);
+    const response = JSON.parse(localStorage.getItem("TaskName"));
+    setAllTaskDetails(response || []);
+  }, [setAllTaskDetails]);
 
   const handleSubmit = () => {
     if (inputTask.TaskName && inputTask.Description) {
