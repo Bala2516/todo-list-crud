@@ -59,7 +59,7 @@ export function Todo({ setAllTaskDetails, inputTask, setInputTask }) {
         Add Task
       </Button>
       <Modal show={show} onHide={() => setShow(false)} centered>
-        <Modal.Header closeButton >
+        <Modal.Header closeButton>
           <Modal.Title>Task Details</Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -79,14 +79,19 @@ export function Todo({ setAllTaskDetails, inputTask, setInputTask }) {
           <textarea
             className="input"
             value={inputTask.Description}
-            onChange={(e) =>
+            onChange={(e) => {
+              const lastId =
+                taskData && taskData.length > 0
+                  ? taskData[taskData.length - 1].id + 1
+                  : 1;
+
               setInputTask({
                 ...inputTask,
                 Description: e.target.value,
-                id: taskData ? taskData[taskData.length - 1].id + 1 : 1,
+                id: lastId,
                 Created_at: currentTime,
-              })
-            }
+              });
+            }}
             style={{ height: "200px" }}
           ></textarea>
         </Modal.Body>

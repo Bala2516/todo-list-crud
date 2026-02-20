@@ -51,7 +51,7 @@ function App() {
         const taskData = JSON.parse(localStorage.getItem("TaskName")) || [];
 
         const updatedTasks = taskData.map((task) => {
-          return task.id == selectedId ? { ...task, ...inputTask } : task;
+          return task.id === selectedId ? { ...task, ...inputTask } : task;
         });
 
         localStorage.setItem("TaskName", JSON.stringify(updatedTasks));
@@ -73,7 +73,7 @@ function App() {
     if (deleteId) {
       const taskData = JSON.parse(localStorage.getItem("TaskName")) || [];
 
-      const updatedTasks = taskData.filter((task) => task.id != deleteId);
+      const updatedTasks = taskData.filter((task) => task.id !== deleteId);
 
       localStorage.setItem("TaskName", JSON.stringify(updatedTasks));
       setAllTaskDetails(updatedTasks);
