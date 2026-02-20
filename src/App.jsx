@@ -4,6 +4,7 @@ import { Table } from "./Table";
 import { Todo } from "./Todo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TaskDetails from "./TaskDetails";
+import backImage from "./asserts/back.jpg";
 
 export const context = createContext();
 
@@ -88,7 +89,14 @@ function App() {
             <Route
               path="/"
               element={
-                <div className="containers">
+                <div
+                  className="containers"
+                  style={{
+                    backgroundImage: `url(${backImage})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                >
                   <div className="constainers-in">
                     <Todo
                       inputTask={inputTask}

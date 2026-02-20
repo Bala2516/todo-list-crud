@@ -1,6 +1,4 @@
 .containers {
-  background-image: url("./asserts/back.jpg");
-  background-size: cover;
   height: 100vh;
   padding: 10px;
 }
