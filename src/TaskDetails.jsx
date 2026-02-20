@@ -25,7 +25,7 @@ function TaskDetails({
   useEffect(() => {
     const taskData = JSON.parse(localStorage.getItem("TaskName"));
     const selectedTask = taskData.filter((task) => {
-      return task.id == id;
+      return task.id === Number(id);
     });
     setTaskDetails(selectedTask);
   }, [id]);
